@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -44,4 +45,37 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
     implementation 'com.github.allan1st:JellyRefreshLayout:2.0'
+
+
+    // retrofit + gson
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.6.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.2'
+    implementation 'com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:0.9.2'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.0'
+
+    // navigation
+    implementation "androidx.navigation:navigation-fragment-ktx:2.3.3"
+    implementation "androidx.navigation:navigation-ui-ktx:2.3.3"
+
+    // rx
+    implementation "io.reactivex.rxjava2:rxjava:2.2.19"
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+
+    implementation 'com.google.dagger:dagger:2.31'
+    kapt 'com.google.dagger:dagger-compiler:2.31'
+
+    implementation 'com.google.dagger:dagger-android:2.28.3'
+    implementation 'com.google.dagger:dagger-android-support:2.28.3' // if you use the support libraries
+    kapt 'com.google.dagger:dagger-android-processor:2.23'
+
+    implementation "com.github.valeryponomarenko.componentsmanager:androidx:2.1.0"
+    implementation 'com.facebook.fresco:fresco:1.10.0'
+
+    //moxy
+    implementation "com.github.moxy-community:moxy:2.1.2"
+    implementation "com.github.moxy-community:moxy-androidx:2.1.2"
+    implementation "com.github.moxy-community:moxy-ktx:2.1.2"
+    implementation "com.github.moxy-community:moxy-material:2.1.2"
+    kapt "com.github.moxy-community:moxy-compiler:2.1.2"
 }
