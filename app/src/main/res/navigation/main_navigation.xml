@@ -9,7 +9,11 @@
         android:id="@+id/newsFragment"
         android:name="uz.zn.mvpdaggernews.application.feature.NewsFragment"
         tools:layout="@layout/dashboard_layout"
-        android:label="NewsFragment" />
+        android:label="NewsFragment" >
+        <action
+            android:id="@+id/action_newsFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/detailsFragment"
         android:name="uz.zn.mvpdaggernews.application.feature.DetailsFragment"
